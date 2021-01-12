@@ -99,8 +99,9 @@ public class AddAct extends AppCompatActivity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
-        if(requestCode == CAMERA_REQUEST_CODE){
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CAMERA_REQUEST_CODE) {
             img = (Bitmap) data.getExtras().get("data");
             image.setImageBitmap(img);
         }

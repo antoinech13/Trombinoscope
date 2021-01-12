@@ -14,8 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trombinoscope">
         <activity
+            android:name=".AddTrombiActivity"
+            android:label="@string/title_activity_add_trombi"
+            android:theme="@style/Theme.Trombinoscope.NoActionBar"></activity>
+        <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity android:name=".AddAct" />
 
         <meta-data
@@ -29,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -21,7 +21,7 @@ public class LoginDataSource {
             LoggedInUser fakeUser =
                     new LoggedInUser(
                             java.util.UUID.randomUUID().toString(),
-                            "Antoine");
+                            "Admin");
             return new Result.Success<>(fakeUser);
         }
         else{

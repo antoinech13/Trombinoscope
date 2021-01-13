@@ -69,11 +69,13 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.GONE);
                 if (loginResult.getError() != null) {
                     showLoginFailed(loginResult.getError());
+                    setResult(Activity.RESULT_CANCELED);
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
+                    setResult(Activity.RESULT_OK);
                 }
-                setResult(Activity.RESULT_OK);
+
                 //Complete and destroy login activity once successful
 
                 finish();
